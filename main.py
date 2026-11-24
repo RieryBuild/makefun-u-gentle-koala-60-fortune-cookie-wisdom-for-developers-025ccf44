@@ -4,11 +4,13 @@ Writes one original fortune-cookie line to $MAKEFUN_OUTPUT_DIR/entry.txt
 (default /output). The line is a fixed constant: no input, no network,
 no randomness, so both grading runs produce byte-identical output.
 Written with no trailing newline, as the gate counts characters.
+The line turns a throwaway debug log line into the thing that outlasts
+the bug, the fix, and the developer who added it.
 """
 
 import os
 
-FORTUNE = "The legacy code you curse was written by someone who, like you, ran out of time."
+FORTUNE = "The log line you added for one afternoon will outlive the bug, the fix, and you."
 
 def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
